@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+DIRNAME=$1
+mkdir Afbeeldingen/Vakantie
+find Afbeeldingen/ | grep vakantie |  xargs -I {} mv {} Afbeeldingen/Vakantie

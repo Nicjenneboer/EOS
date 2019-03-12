@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+DIRNAME=$1
+COMMAND=$2
+if [ -e log.txt ]; then
+    rm log.txt
+fi 
+touch log.txt
+for file in $DIRNAME/*; do
+        $COMMAND "$file"
+        echo $? >> log.txt
+done

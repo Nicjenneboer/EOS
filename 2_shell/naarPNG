@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+DIRNAME=$1
+for image in $DIRNAME/*.jpg; do
+        convert  "$image"  "${image%.jpg}.png"
+done
